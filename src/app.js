@@ -40,3 +40,23 @@ app.post('/search',(req,res)=>
 
 })
 })
+app.post('/details',(req,res)=>
+{
+    console.log(req.body)
+    MongoClient.connect(url,{useNewUrlParser :true},(error,response)=>
+{
+    if(error)
+    {
+        return console.log('unable to connect to databse')
+    }
+
+    const db=response.db('Project')
+
+    db.collection(req.body.department).find({name:req.body.name}).toArray((e,r)=>
+    {
+        res.send(r)
+    })
+
+})
+
+})
