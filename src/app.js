@@ -17,7 +17,7 @@ app.get('/',(req,res)=>
 app.post('/search',(req,res)=>
 {
     console.log(req.body)
-    MongoClient.connect(url,{useNewUrlParser :true},(error,response)=>
+    MongoClient.connect(url,{useNewUrlParser :false},(error,response)=>
 {
     if(error)
     {
@@ -28,7 +28,14 @@ app.post('/search',(req,res)=>
 
     db.collection(req.body.lab).find({role:req.body.role}).toArray((e,r)=>
     {
-        res.send(r)
+        if(e)
+        {
+            res.send(e)
+        }
+        else
+        {
+            res.send(r)
+        }
     })
 
 })
