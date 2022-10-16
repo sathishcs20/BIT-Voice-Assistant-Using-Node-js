@@ -17,7 +17,7 @@ app.get('/',(req,res)=>
 app.post('/search',(req,res)=>
 {
     console.log(req.body)
-    MongoClient.connect(url,{useNewUrlParser :false},(error,response)=>
+    MongoClient.connect(url,{useNewUrlParser :true},(error,response)=>
 {
     if(error)
     {
