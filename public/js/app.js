@@ -8,8 +8,8 @@ function speak(sentence)
     const text_speak = new SpeechSynthesisUtterance(sentence);
     
     
-    text_speak.rate = 1;
-    text_speak.pitch = 1;
+    text_speak.rate = 10;
+    text_speak.pitch = 10;
 
     window.speechSynthesis.speak(text_speak);
 }
