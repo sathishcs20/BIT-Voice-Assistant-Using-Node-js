@@ -47,3 +47,13 @@ function wishMe()
           window.speechSynthesis.speak(speech)
 
 }
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+recognition.onresult = (event) => 
+{
+    const current = event.resultIndex;
+    const transcript = event.results[current][0].transcript;
+    content.textContent = transcript;
+    speakThis(transcript.toLowerCase());
+}
