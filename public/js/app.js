@@ -82,3 +82,8 @@ function speakThis(message)
         const finalText = "My name is Gwen";
         speech.text = finalText;
     }
+  else if(message.includes('open google')) {
+        window.open("https://google.com", "_blank");
+        const finalText = "Opening Google";
+        speech.text = finalText;
+    }
