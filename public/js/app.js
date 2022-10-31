@@ -57,3 +57,9 @@ recognition.onresult = (event) =>
     content.textContent = transcript;
     speakThis(transcript.toLowerCase());
 }
+btn.addEventListener('click', ()=>
+{
+    wishMe()
+    recognition.start();
+    
+})
