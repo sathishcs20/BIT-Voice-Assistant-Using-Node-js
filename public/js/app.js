@@ -78,3 +78,7 @@ function speakThis(message)
         const finalText = "I am fine boss tell me how can i help you";
         speech.text = finalText;
     }
+    else if(message.includes('what is your name')) {
+        const finalText = "My name is Gwen";
+        speech.text = finalText;
+    }
