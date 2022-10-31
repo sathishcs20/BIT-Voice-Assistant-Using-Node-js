@@ -63,3 +63,14 @@ btn.addEventListener('click', ()=>
     recognition.start();
     
 })
+function speakThis(message)
+{
+    const speech = new SpeechSynthesisUtterance();
+
+
+
+    if(message.includes('hey') || message.includes('hello')) 
+    {
+        const finalText = "Hello Boss";
+        speech.text = finalText;
+    }
