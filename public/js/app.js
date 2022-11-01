@@ -97,3 +97,8 @@ else if(message.includes('what is') || message.includes('what are')) {
         const finalText = "This is what i found on internet regarding " + message;
         speech.text = finalText;
     }
+ else if(message.includes('wikipedia')) {
+        window.open(`https://en.wikipedia.org/wiki/${message.replace("wikipedia", "")}`, "_blank");
+        const finalText = "This is what i found on wikipedia regarding " + message;
+        speech.text = finalText;
+    }
