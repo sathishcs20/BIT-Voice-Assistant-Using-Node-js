@@ -87,3 +87,8 @@ function speakThis(message)
         const finalText = "Opening Google";
         speech.text = finalText;
     }
+  else if(message.includes('open instagram')) {
+        window.open("https://instagram.com", "_blank");
+        const finalText = "Opening instagram";
+        speech.text = finalText;
+    }
