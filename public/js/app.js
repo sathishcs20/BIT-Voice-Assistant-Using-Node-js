@@ -105,7 +105,7 @@ else if(message.includes('what is') || message.includes('what are')) {
   else if(message.includes('time')) {
         const time = new Date().toLocaleString(undefined, {hour: "numeric", minute: "numeric"})
         const finalText = time;
-        speech= finalText;
+        speech.text= finalText;
     }
    else if(message.includes('date')) {
         const date = new Date().toLocaleString(undefined, {month: "short", day: "numeric"})
