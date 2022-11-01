@@ -112,3 +112,8 @@ else if(message.includes('what is') || message.includes('what are')) {
         const finalText = date;
         speech.text = finalText;
     }
+  else if(message.includes('calculator')) {
+        window.open('Calculator:///')
+        const finalText = "Opening Calculator";
+        speech.text = finalText;
+    }
