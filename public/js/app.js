@@ -102,3 +102,8 @@ else if(message.includes('what is') || message.includes('what are')) {
         const finalText = "This is what i found on wikipedia regarding " + message;
         speech.text = finalText;
     }
+  else if(message.includes('time')) {
+        const time = new Date().toLocaleString(undefined, {hour: "numeric", minute: "numeric"})
+        const finalText = time;
+        speech.text = finalText;
+    }
