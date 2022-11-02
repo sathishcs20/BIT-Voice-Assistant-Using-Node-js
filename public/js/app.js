@@ -151,4 +151,12 @@ else if(message.includes("chair man") || message.includes("chairman"))
       })
 
     }
+  else if((message.includes("computer science") || message.includes("computer technology")) && message.includes('details'))
+    {
+        if(message.includes('computer science'))
+        {
+        
+            message=message.replace("details about","")
+            message=message.replace("computer science department","")
+            message =message.trim()
 
