@@ -117,3 +117,8 @@ else if(message.includes('what is') || message.includes('what are')) {
         const finalText = "Opening Calculator";
         speech.text = finalText;
     }
+else if(message.includes("chair man") || message.includes("chairman"))
+    {
+      const finalText = "chair man of bannari amman institute of technology is mister bala subramaniyam";
+        speech.text = finalText;
+    }
