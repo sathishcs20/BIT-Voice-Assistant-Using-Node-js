@@ -122,3 +122,16 @@ else if(message.includes("chair man") || message.includes("chairman"))
       const finalText = "chair man of bannari amman institute of technology is mister bala subramaniyam";
         speech.text = finalText;
     }
+  else if(message.includes('data science') && (message.includes('incharge') || message.includes("in charge")))
+    {
+    
+      fetch('http://localhost:3000/search',{
+        method:'POST',
+        headers:{'Content-Type': 'application/json'},
+        body:JSON.stringify(
+          {
+            lab:"data science",
+            role:"incharge"
+          }
+        )
+
