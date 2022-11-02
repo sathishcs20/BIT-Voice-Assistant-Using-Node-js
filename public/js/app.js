@@ -134,4 +134,21 @@ else if(message.includes("chair man") || message.includes("chairman"))
             role:"incharge"
           }
         )
+        }).then((data)=>
+      {
+        data.json().then((res)=>
+        {
+          const result =res[0].name
+          const finalText = "Incharge of Data Science lab is "+result;
+          speech.text = finalText;
+          speech.volume = 1;
+          speech.pitch = 1;
+          speech.rate = 1;
+
+          window.speechSynthesis.speak(speech)
+          
+        })
+      })
+
+    }
 
