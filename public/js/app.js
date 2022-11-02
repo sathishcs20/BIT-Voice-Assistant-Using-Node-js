@@ -159,4 +159,13 @@ else if(message.includes("chair man") || message.includes("chairman"))
             message=message.replace("details about","")
             message=message.replace("computer science department","")
             message =message.trim()
+          fetch('http://localhost:3000/details',{
+        method:'POST',
+        headers:{'Content-Type': 'application/json'},
+        body:JSON.stringify(
+          {
+            department:"computer science",
+            name:message
+          }
+        )
 
