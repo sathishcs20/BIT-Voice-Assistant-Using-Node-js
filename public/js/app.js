@@ -227,3 +227,9 @@ else if(message.includes("chair man") || message.includes("chairman"))
         const finalText = "I found some information for " + message + " on google";
         speech.text = finalText;
     }
+       speech.volume = 1;
+    speech.pitch = 1;
+    speech.rate = 1;
+
+    window.speechSynthesis.speak(speech);
+}
