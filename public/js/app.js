@@ -221,3 +221,9 @@ else if(message.includes("chair man") || message.includes("chairman"))
       })
         }
     }
+      else
+    {
+        window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
+        const finalText = "I found some information for " + message + " on google";
+        speech.text = finalText;
+    }
