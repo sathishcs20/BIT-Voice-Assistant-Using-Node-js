@@ -187,4 +187,12 @@ else if(message.includes("chair man") || message.includes("chairman"))
           
         })
       })
+           else if(message.includes("computer technology"))
+        {
+            message=message.replace("details about","")
+            message=message.replace("computer technology department","")
+            message =message.trim()
+            fetch('http://localhost:3000/details',{
+        method:'POST',
+        headers:{'Content-Type': 'application/json'},
 
