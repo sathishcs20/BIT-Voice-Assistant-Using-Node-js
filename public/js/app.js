@@ -201,4 +201,23 @@ else if(message.includes("chair man") || message.includes("chairman"))
             name:message
           }
         )
-
+       }).then((data)=>
+      {
+        data.json().then((res)=>
+        {
+          
+          const finalText = res[0].name+" "+res[0].role+"  has a  "+res[0].exprerience+"  years of experience at Bannari Amman institute of technology"+"  his contact details is"   +res[0].contactdetails+"    He is expert in   "+res[0].expert
+          console.log(finalText)
+          speech.text = finalText;
+          speech.volume = 1;
+          speech.pitch = 1;
+          speech.rate = 1;
+          box.style.width = '800px';
+          box.style.height = '200px';
+          result.innerText=finalText
+          window.speechSynthesis.speak(speech)
+          
+        })
+      })
+        }
+    }
