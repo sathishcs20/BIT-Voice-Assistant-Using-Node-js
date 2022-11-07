@@ -195,4 +195,10 @@ else if(message.includes("chair man") || message.includes("chairman"))
             fetch('http://localhost:3000/details',{
         method:'POST',
         headers:{'Content-Type': 'application/json'},
+               body:JSON.stringify(
+          {
+            department:"computer technology",
+            name:message
+          }
+        )
 
