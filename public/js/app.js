@@ -50,7 +50,7 @@ function wishMe()
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
-recognition.onresult = (event) => 
+recognition.onresult = (event) =>
 {
     const current = event.resultIndex;
     const transcript = event.results[current][0].transcript;
@@ -130,7 +130,7 @@ else if(message.includes("chair man") || message.includes("chairman"))
         headers:{'Content-Type': 'application/json'},
         body:JSON.stringify(
           {
-            lab:"data science",
+            lab:"datascience",
             role:"incharge"
           }
         )
