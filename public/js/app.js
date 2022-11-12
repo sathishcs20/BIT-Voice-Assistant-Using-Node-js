@@ -1,7 +1,7 @@
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
 const result = document.querySelector('.con');
-const box=document.querySelector('.res')
+
 function speak(sentence) 
 {
   
