@@ -130,7 +130,7 @@ else if(message.includes("chair man") || message.includes("chairman"))
         headers:{'Content-Type': 'application/json'},
         body:JSON.stringify(
           {
-            lab:"datascience",
+            lab:"data science",
             role:"incharge"
           }
         )
